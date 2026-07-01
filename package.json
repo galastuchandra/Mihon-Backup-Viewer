@@ -7,7 +7,8 @@
     "lint-staged": "^17.0.0",
     "postcss": "^8.5.4",
     "prettier": "^3.5.3",
-    "prettier-plugin-css-order": "^2.1.2"
+    "prettier-plugin-css-order": "^2.1.2",
+    "wrangler": "^4.106.0"
   },
   "optionalDependencies": {
     "long": "^5.2.3",
@@ -17,7 +18,9 @@
   "scripts": {
     "prepare": "husky",
     "publish": "node .esbuild.mjs",
-    "test": "npx http-server -o \"site?demo=1\" -c-1"
+    "test": "npx http-server -o \"site?demo=1\" -c-1",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "lint-staged": {
     "**/*.{js,md,html,css}": "prettier --write"
